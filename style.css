@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color:dodgerblue;
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ====== Area tela do jogo ====== */
+
+#main-play-area {
+  background-color: black;
+  background-image: url(img/space.png);
+  height: 600px;
+  width: 600px;
+}
+
+/* ====== img do hero ====== */
+
+.player-shooter {
+  height: 60px;
+  left: 20px;
+  position: relative;
+  top: 250px;
+}
