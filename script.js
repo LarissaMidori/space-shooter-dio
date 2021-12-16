@@ -86,4 +86,21 @@ function createAliens() {
   moveAlien(newAlien);
 }
 
+// Função para movimentar os inimigos
+function moveAlien(alien) {
+  let moveAlienInterval = setInterval(() => {
+    let xPosition = parseInt(window.getComputedStyle(alien).getPropertyValue('left'));//se o jogo fosse de cima para baixo seria o yPosition
+    if (xPosition <= 50) {
+      if (Array.from(alien.classList).includes('dead-alien')) { // se o inimigo for atingido
+        alien.remove();
+      } else { // se o inimigo tiver passado pelo hero
+        //gameOver();
+      }
+    } else {
+      alien.style.left = `${xPosition - 4}px`;
+    }
+
+  }, 30);
+}
+
 window.addEventListener('keydown', flyShip); // Movimenta a nave
