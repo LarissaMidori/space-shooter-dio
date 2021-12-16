@@ -39,4 +39,24 @@ function moveDown() {
   }
 }
 
+// Funcionalidade de tiro
+function fireLaser () {
+  let laser = createLaserElement();
+  playArea.appendChild(laser);
+  moveLaser();
+  
+}
+
+// Função para criar o laser element
+function createLaserElement() {
+  let xPosition = parseInt(window.getComputedStyle(yourShip).getPropertyValue('left'));
+  let yPosition = parseInt(window.getComputedStyle(yourShip).getPropertyValue('top'));
+  let newLaser = document.createElement('img');
+  newLaser.src = 'img/shoot.png'; //fonte da imagem
+  newLaser.classList.add('laser'); // cria uma classe para a imagem
+  newLaser.style.left = `${xPosition}px`;
+  newLaser.style.top = `${yPosition - 10}px`;
+  return newLaser;
+}
+
 window.addEventListener('keydown', flyShip); // Movimenta a nave
