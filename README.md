@@ -1,8 +1,6 @@
 ## HTML, CSS e JS - DIO
-
 ### Projeto de jogo no estilo Space Shooter
-
-#### Aula dada por: Gabirela Pinheiro
+#### Aula dada por: Gabriela Pinheiro
 
 Nesta aula foi ensinado:
 
