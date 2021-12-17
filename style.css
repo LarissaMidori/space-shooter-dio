@@ -22,6 +22,23 @@ body {
   width: 620px;
 }
 
+/* ====== instruções do jogo e botão de start ====== */
+.game-instructions {
+  color: white;
+  /* left: 4rem; */
+  position: relative;
+  text-align: center;
+  top: 0px;
+}
+
+.start-button {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  top: 9rem;
+}
+
 /* ====== img do hero ====== */
 
 .player-shooter {
@@ -36,4 +53,21 @@ body {
   height: 30px;
   position: relative;
   width:40px;
+}
+
+/* ===== aliens inimigos ====== */
+
+.alien {
+  position: relative;
+  width: 70px;
+}
+
+.alien-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.dead-alien {
+  height: 60px;
+  position: relative;
 }
