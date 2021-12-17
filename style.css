@@ -18,8 +18,8 @@ body {
 #main-play-area {
   background-color: black;
   background-image: url(img/space.png);
-  height: 620px;
-  width: 620px;
+  height: 610px;
+  width: 710px;
 }
 
 /* ====== instruções do jogo e botão de start ====== */
@@ -58,8 +58,8 @@ body {
 /* ===== aliens inimigos ====== */
 
 .alien {
+  height: 60px;
   position: relative;
-  width: 70px;
 }
 
 .alien-transition {

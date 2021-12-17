@@ -107,7 +107,7 @@ function moveAlien(alien) {
       if (Array.from(alien.classList).includes('dead-alien')) { // se o inimigo for atingido
         alien.remove();
       } else { // se o inimigo tiver passado pelo hero
-        //gameOver();
+        gameOver();
       }
     } else {
       alien.style.left = `${xPosition - 4}px`;
@@ -123,7 +123,7 @@ function checkLaserCollision(laser, alien) {
   let laserBottom = laserTop - 20;
   let alienTop = parseInt(alien.style.top);
   let alienLeft = parseInt(alien.style.left);
-  let alienBottom = alienTop - 20;
+  let alienBottom = alienTop - 30;
   if (laserLeft !=340 && laserLeft + 40 >= alienLeft) {
     if (laserTop <= alienTop && laserTop >= alienBottom) {
       return true;
@@ -148,3 +148,20 @@ function playGame() {
     createAliens();
   }, 2000);
 }
+
+// Função de game over
+function gameOver() {
+  window.removeEventListener('keydown', flyShip);
+  clearInterval(alienInterval);
+  let aliens = document.querySelectorAll('.alien');
+  aliens.forEach((alien) => alien.remove());
+  let lasers = document.querySelectorAll('.laser');
+  lasers.forEach((laser) => laser.remove());
+  setTimeout(() => {
+    alert('Game Over!!!');
+    yourShip.style.top = "250px";
+    startButton.style.display = "block";
+    instructionsText.style.display = "block";
+  });
+}
+  
